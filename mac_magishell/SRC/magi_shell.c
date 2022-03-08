@@ -6,7 +6,7 @@
 /*   By: akramp <akramp@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/07 13:57:25 by akramp        #+#    #+#                 */
-/*   Updated: 2022/02/24 22:47:09 by epanholz      ########   odam.nl         */
+/*   Updated: 2022/03/08 13:18:20 by Angi          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,12 +93,13 @@ int	main(void)
 	init_magi(&magi);
 	ctr_handle();
 	signal_main();
+	print_ascii(&magi);
 	read_loop(&magi);
 	return (0);
 }
 
 /*
-	line 97 ---> print_ascii(magi);
+	line 97 ---> print_ascii(&magi);
 				clear_screen();
 	line 78 ---> print_list(&magi->head);
 */
