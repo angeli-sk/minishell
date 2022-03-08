@@ -6,7 +6,7 @@
 #    By: akramp <akramp@student.codam.nl>             +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/08 16:53:59 by akramp        #+#    #+#                  #
-#    Updated: 2022/02/23 21:42:52 by epanholz      ########   odam.nl          #
+#    Updated: 2022/03/08 13:04:25 by Angi          ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = 		magi_shell
 CC = 		gcc
 FLAGS =  	-Wall -Werror -Wextra
 TEST_FLAG =	-lcriterion -L/Users/akramp/.brew/Cellar/criterion/2.3.3/lib/
-READLINE_FLAG = -lreadline -L/Users/$(USER)/.brew/opt/readline/lib -I/Users/$(USER)/.brew/opt/readline/include
+READLINE_FLAG = -lreadline -L/usr/local/opt/readline/lib -I/usr/local/opt/readline/include
 
 #✧･ﾟ: *✧･ﾟ:*  *:･ﾟ✧*:･ﾟ✧✧･ *✧･ﾟ:* SOURCES ✧*:･ﾟ✧: *✧･ﾟ:*  *:･ﾟ✧*:･ﾟ✧✧･ﾟ: *✧･ﾟ:#
 

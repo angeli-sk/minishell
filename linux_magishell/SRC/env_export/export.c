@@ -6,7 +6,7 @@
 /*   By: akramp <akramp@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/17 10:14:56 by akramp        #+#    #+#                 */
-/*   Updated: 2022/03/07 13:21:36 by ubuntu        ########   odam.nl         */
+/*   Updated: 2022/02/23 16:15:54 by akramp        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,14 +66,18 @@ static void	export_token_argc_2_if_valid(t_list	*current, int i, char **temp, \
 		(*env_token) = ft_substr(current->token, 0, i);
 		return ;
 	}
-	(*temp) = malloc(sizeof(char) * (ft_strlen(current->token) + 1));
+	(*temp) = malloc(sizeof(char) * (ft_strlen(current->token) + 3));
 	if ((*temp) == NULL)
 	{
 		error_msg(MALLOC_FAIL, NULL);
 		exit(EXIT_FAILURE);
 	}
-	ft_memcpy((*temp), current->token, ft_strlen(current->token));
-	(*temp)[ft_strlen(current->token)] = '\0';
+	ft_memcpy((*temp), current->token, i + 1);
+	(*temp)[i + 1] = '\"';
+	ft_memcpy(&(*temp)[i + 2], &current->token[i + 1], \
+		ft_strlen(current->token) - (i + 1));
+	(*temp)[ft_strlen(current->token) + 1] = '\"';
+	(*temp)[ft_strlen(current->token) + 2] = '\0';
 	free (current->token);
 	current->token = (*temp);
 	(*env_token) = ft_substr(current->token, 0, i);
