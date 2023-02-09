@@ -1,10 +1,12 @@
 # minishell
 
 Minishell made by https://github.com/epanholz and me!
+It's a project that recreates the beloved unix shell <3 It's wayyy dumber than the original, but it does look cooler.
 
+Notes:
 Most common compile error is the readline lib, so change the path in the Makefile.
 
-It's evangelion themed.
+////////It's evangelion themed.//////////
 
 To change eva type one of these commands:
 eva-00,
